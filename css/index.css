@@ -52,6 +52,17 @@ table {
     border: 1px solid black;
 }
 
+@keyframes pulse{ /*pulse button prototype*/
+    from {background-color:white; color:black}
+    to {background-color:black; color:white}
+  }
+p.button:hover{
+    animation-name:pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
