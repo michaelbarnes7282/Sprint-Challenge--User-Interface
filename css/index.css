@@ -49,6 +49,24 @@ table {
 
 * {
     box-sizing: border-box;
+    border: 1px solid black;
+}
+
+@keyframes pulse{ /*pulse button prototype*/
+    from {background-color:white; color:black}
+    to {background-color:black; color:white}
+  }
+p.button:hover{
+    animation-name:pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+button:hover{
+    animation-name:pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 html, body {
@@ -66,9 +84,27 @@ p {
     line-height: 1.4;
 }
 
-.container {
+.container,nav {
     width: 800px;
     margin: 0 auto;
+}
+
+div.top-img{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+header nav{
+    display:flex;
+    justify-content:space-between;
+    align-items: flex-end;
+    font-size:15px;
+    margin-bottom:40px;
+}
+nav a{
+    text-decoration:none;
+    color: black
 }
 
 .top-content {
@@ -90,11 +126,62 @@ p {
     border-bottom: 1px dashed black;
 }
 
+.about{
+    padding: 0 1%;
+    padding-bottom: 20px;  
+    border-bottom: 1px dashed black;
+}
+input, textarea{
+    border:none;
+    border-bottom:3px solid black;
+    background-color:white;
+    width: 100%;
+    height: 40px;
+}
+button{
+    width:100%;
+    background-color:white;
+    color: black;
+    padding: 2% 0;
+    border: 2px solid black;
+    margin-top:3%;
+  }
+.contact{
+    padding: 0 1%;
+    padding-bottom: 20px;
+}
+.end{
+    border-bottom: 0;
+    margin: 10px 0;
+}
+.middle-content2{
+    display:flex;
+    flex-wrap:wrap;
+    margin: 30px 0;
+}
+h2{
+    margin:10px 0;
+}
+.middle-content2 div{
+    width:45%;
+    margin: 10px;
+    border-bottom: 1px dashed black;
+}
+p.button{
+    margin: 10px 0;
+    margin-right:26vh;
+	height:3vh;
+	border-radius: 5px;
+	border: 1px solid black;
+	background-color:white;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
 .middle-content h2 {
     padding: 0 2%;
     margin-bottom: 0;
 }
-
 .middle-content .boxes {
     display: flex;
     flex-wrap: wrap;
@@ -104,12 +191,41 @@ p {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.box1{
+    background-color: teal;
+}
+.box2{
+    background: gold;
+}
+.box3{
+    background: cadetblue;
+}
+.box4{
+    background: coral;
+}
+.box5{
+    background: crimson;
+}
+.box6{
+    background: forestgreen;
+}
+.box7{
+    background: darkorchid;
+}
+.box8{
+    background: hotpink;
+}
+.box9{
+    background:indigo;
+}
+.box10{
+   background: dodgerblue;
 }
 
 .bottom-content {
@@ -143,4 +259,8 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+label, input{
+    margin: 10px 0;
+    display: flex;
 }
